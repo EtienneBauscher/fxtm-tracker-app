@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Forex (Development mode iOS)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": ["--dart-define=ENV=development"],
+      "deviceId": "B92C4BB9-6CBB-4989-9FBC-0287B0038113"
+    },
+    {
+      "name": "Forex (Development mode Android)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": ["--dart-define=ENV=development"],
+      "deviceId": "emulator-5554"
+    }
+  ]
+}

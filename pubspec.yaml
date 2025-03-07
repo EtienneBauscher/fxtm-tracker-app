@@ -1,0 +1,66 @@
+name: fxtm
+description: FXTM Stock List App Shell
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.7.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  get_it: ^8.0.2
+  freezed: ^2.5.7
+  freezed_annotation: ^2.4.4
+  build_runner: ^2.4.13
+  dio: ^5.7.0
+  json_annotation: ^4.9.0
+  json_serializable: ^6.9.0
+  web_socket_channel: ^3.0.2
+  logger: ^2.5.0
+  flutter_dotenv: ^5.2.1
+  flutter_localizations:
+    sdk: flutter
+  flutter_bloc: ^9.1.0
+  intl: ^0.19.0
+  intl_translation: ^0.20.0
+  intl_utils: ^2.8.8
+  go_router: ^14.8.1
+  collection: ^1.19.1
+  flutter_form_builder: ^10.0.0
+  form_builder_validators: ^11.1.1
+  flutter_launcher_icons: ^0.14.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  bloc_test: ^10.0.0
+  mockito: ^5.4.5
+  mocktail: ^1.0.4
+  test: ^1.25.15
+  import_sorter: ^4.6.0
+
+flutter_intl:
+  enabled: true
+  class_name: AppLocalizations
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - .env.development
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/logo.png"
+
+import_sorter:
+  comments: true
+  emojis: true
+  ignored_files:
+    - \/lib/l10n\/*

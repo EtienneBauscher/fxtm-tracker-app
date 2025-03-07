@@ -1,0 +1,9 @@
+pre-commit:
+  commands:
+    sorter:
+      files: git diff --name-only --cached
+      run: |
+        files=$(git diff --name-only --cached --diff-filter=ACM | grep ".*\.dart$")
+        if [ -n "$files" ]; then
+          fvm dart run import_sorter:main $files && git add $files
+        fi

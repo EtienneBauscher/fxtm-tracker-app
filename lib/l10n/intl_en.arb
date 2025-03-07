@@ -1,0 +1,69 @@
+{
+    "@@locale": "en",
+    "forexTitle": "FXTM Forex Tracker",
+    "@forexTitle": {
+        "description": "Title for the application",
+        "type": "text",
+        "placeholders": {}
+    },
+    "oandaTitle": "OANDA Trading Ticker Prices",
+    "@oandaTitle": {
+        "description": "OANDA Ticker title for the main page",
+        "type": "text",
+        "placeholders": {}
+    },
+    "majorPairsTab": "Major Pairs",
+    "@majorPairsTab": {
+        "description": "Major Pairs Tab text",
+        "type": "text",
+        "placeholders": {}
+    },
+    "minorPairsTab": "Minor Pairs",
+    "@minorPairsTab": {
+        "description": "Minor Pairs Tab text",
+        "type": "text",
+        "placeholders": {}
+    },
+    "exoticPairsTab": "Exotic Pairs",
+    "@exoticPairsTab": {
+        "description": "Exotic Pairs Tab text",
+        "type": "text",
+        "placeholders": {}
+    },
+    "groupOneTab": "Group one",
+    "@groupOneTab": {
+        "description": "Group one Tab text",
+        "type": "text",
+        "placeholders": {}
+    },
+    "groupTwoTab": "Group two",
+    "@groupTwoTab": {
+        "description": "Group two Tab text",
+        "type": "text",
+        "placeholders": {}
+    },
+    "searchInstrumentsPlaceHolder": "Search instruments",
+    "@searchInstrumentsPlaceHolder": {
+        "description": "Search instruments placeholder text",
+        "type": "text",
+        "placeholders": {}
+    },
+    "intstrumentBlocErrorMessage": "An error occured, please try again",
+    "@intstrumentBlocErrorMessage": {
+        "description": "Error message for the Instrument Bloc error state",
+        "type": "text",
+        "placeholders": {}
+    },
+    "tryAgainButtonText": "Try again",
+    "@tryAgainButtonText": {
+        "description": "Try again button text",
+        "type": "text",
+        "placeholders": {}
+    },
+    "webSocketConnectionErrorMessage": "The WebSocket couldn't connect, please wait a while before navigating again",
+    "@webSocketConnectionErrorMessage": {
+        "description": "WebSocket connection error message for the Instrument Bloc",
+        "type": "text",
+        "placeholders": {}
+    }
+}
