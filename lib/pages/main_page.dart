@@ -304,6 +304,12 @@ class _MainPageState extends State<MainPage> {
   ListTile _buildInstrument(Instrument instrument) {
     final priceIncreased = instrument.priceChange == PriceChange.increased;
     final priceDecreased = instrument.priceChange == PriceChange.decreased;
+    final iconColor =
+        priceIncreased
+            ? Colors.green
+            : priceDecreased
+            ? Colors.red
+            : Colors.grey.shade700;
 
     return ListTile(
       title: Text(
@@ -330,12 +336,7 @@ class _MainPageState extends State<MainPage> {
                 : priceDecreased
                 ? Icons.arrow_downward
                 : Icons.remove,
-            color:
-                priceIncreased
-                    ? Colors.green
-                    : priceDecreased
-                    ? Colors.red
-                    : Colors.grey.shade700,
+            color: iconColor,
           ),
         ],
       ),
@@ -348,19 +349,18 @@ class _MainPageState extends State<MainPage> {
     bool priceDecreased = false,
     bool reverse = false,
   }) {
+    final color =
+        priceIncreased
+            ? (reverse ? Colors.red : Colors.green)
+            : priceDecreased
+            ? (reverse ? Colors.green : Colors.red)
+            : Colors.grey.shade500;
+
     return SizedBox(
       width: 82,
       child: Text(
         price?.toStringAsFixed(2) ?? '--',
-        style: TextStyle(
-          fontSize: 12.0,
-          color:
-              priceIncreased
-                  ? (reverse ? Colors.red : Colors.green)
-                  : priceDecreased
-                  ? (reverse ? Colors.green : Colors.red)
-                  : Colors.grey.shade500,
-        ),
+        style: TextStyle(fontSize: 12.0, color: color),
       ),
     );
   }
