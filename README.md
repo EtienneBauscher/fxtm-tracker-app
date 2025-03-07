@@ -38,14 +38,12 @@ fvm dart run build_runner build --delete-conflicting-outputs
 
 ## Running the App
 
-Please insert your respective deviceIds in the `launch.json` and select the device you want to run the app on. 
+Please insert your respective device ids in the `launch.json` and select the device you want to run the app on. 
 To run the app, use the following command or use the debugger if you are using VSCode:
 
 ```
 fvm flutter run --dart-define=ENV=development
 ```
-
-Make sure you have the correct Flutter version installed via FVM.
 
 ## Testing
 
