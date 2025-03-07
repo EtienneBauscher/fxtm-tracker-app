@@ -120,5 +120,3 @@ This optimization keeps the app user friendly not having to wait until all initi
 The FXTM App is designed as a robust, scalable, and maintainable solution. By leveraging best practices like separation of concerns, SOLID principles, and efficient state management, it is well-equipped for future enhancements. Features such as real-time data handling, localization, and thorough testing ensure a high-quality user experience, positioning the app for long-term success.
 
 --- 
-
-This `ARCHITECTURE.md` file provides a detailed and structured overview of the Trading Instruments App’s design and implementation, ensuring clarity and alignment with modern development standards.
