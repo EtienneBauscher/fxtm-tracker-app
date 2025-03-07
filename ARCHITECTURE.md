@@ -71,6 +71,7 @@ This ensures compliance with API constraints while delivering real-time updates 
 The UI is designed for simplicity and responsiveness:
 - **Single Page with Tabs**: A bottom navigation bar allows switching between Major, Minor, and Exotic pairs. Exotic pairs use an additional tab bar to toggle between split groups.
 - **Price Change Indicators**: Each instrument row shows the current price with visual cues (e.g., color changes) to indicate price increases, decreases, or stability.
+- **Instrument search**: A search bar in each of the pairs sections was implemented to assist in narrowing down FX pairs
 
 This layout provides an intuitive and uncluttered user experience.
 
