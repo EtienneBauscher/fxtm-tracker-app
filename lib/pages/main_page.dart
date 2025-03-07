@@ -68,43 +68,41 @@ class _MainPageState extends State<MainPage> {
               bottom: index == 2 ? _buildTabBar() : null,
             ),
 
-            bottomNavigationBar: SafeArea(
-              child: BlocBuilder<ValueCubit<int?>, int?>(
-                bloc: _bottomNavBarIndexCubit,
-                builder: (context, state) {
-                  return BottomNavigationBar(
-                    currentIndex: state ?? 0,
-                    backgroundColor: _contrastPaleYellow,
-                    items: <BottomNavigationBarItem>[
-                      BottomNavigationBarItem(
-                        label: _i10n.majorPairsTab,
-                        icon: const Icon(Icons.looks_one),
+            bottomNavigationBar: BlocBuilder<ValueCubit<int?>, int?>(
+              bloc: _bottomNavBarIndexCubit,
+              builder: (context, state) {
+                return BottomNavigationBar(
+                  currentIndex: state ?? 0,
+                  backgroundColor: _contrastPaleYellow,
+                  items: <BottomNavigationBarItem>[
+                    BottomNavigationBarItem(
+                      label: _i10n.majorPairsTab,
+                      icon: const Icon(Icons.looks_one),
+                    ),
+                    BottomNavigationBarItem(
+                      label: _i10n.minorPairsTab,
+                      icon: const Icon(Icons.looks_two),
+                    ),
+                    BottomNavigationBarItem(
+                      label: _i10n.exoticPairsTab,
+                      icon: const Icon(Icons.looks_3),
+                    ),
+                  ],
+                  onTap: (index) {
+                    _bottomNavBarIndexCubit.setValue(index);
+                    _instrumentBloc.add(
+                      FetchInstruments(
+                        index,
+                        tabBarIndex: index == 2 ? 0 : null,
                       ),
-                      BottomNavigationBarItem(
-                        label: _i10n.minorPairsTab,
-                        icon: const Icon(Icons.looks_two),
-                      ),
-                      BottomNavigationBarItem(
-                        label: _i10n.exoticPairsTab,
-                        icon: const Icon(Icons.looks_3),
-                      ),
-                    ],
-                    onTap: (index) {
-                      _bottomNavBarIndexCubit.setValue(index);
-                      _instrumentBloc.add(
-                        FetchInstruments(
-                          index,
-                          tabBarIndex: index == 2 ? 0 : null,
-                        ),
-                      );
-                      if (index != 2) {
-                        _tabBarIndexCubit.setValue(null);
-                      }
-                      _reset();
-                    },
-                  );
-                },
-              ),
+                    );
+                    if (index != 2) {
+                      _tabBarIndexCubit.setValue(null);
+                    }
+                    _reset();
+                  },
+                );
+              },
             ),
             body: Column(
               children: <Widget>[
