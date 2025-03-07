@@ -23,6 +23,9 @@ Replace `*****insert-your-own-api-key` with your actual Finnhub API key.
 Be sure to run the following commands to build all the neccessary items for the project
 
 ```
+fvm use 3.29.0
+```
+```
 fvm flutter clean
 ```
 ```
