@@ -1,7 +1,3 @@
-Below is a comprehensive `ARCHITECTURE.md` file based on the details you provided. This document outlines the architectural decisions, design principles, and technical approaches used in the development of the FXTM App.
-
----
-
 # Architecture and Design
 
 This document provides an overview of the architectural decisions, design principles, and technical approaches used in the development of the FXTM App. The application is built using Flutter and follows best practices for code structure, state management, and real-time data handling to ensure a robust and scalable solution.
