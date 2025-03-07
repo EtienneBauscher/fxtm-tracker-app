@@ -1,0 +1,2 @@
+/Users/etiennebauscher/Documents/Development/flutter_development/projects/fxtm-tracker-app/android/app/.cxx/Debug/6h9643ix/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/etiennebauscher/Documents/Development/flutter_development/projects/fxtm-tracker-app/android/app/.cxx/Debug/6h9643ix/arm64-v8a/CMakeFiles/rebuild_cache.dir

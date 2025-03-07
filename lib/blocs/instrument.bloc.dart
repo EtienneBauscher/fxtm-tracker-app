@@ -76,8 +76,7 @@ class InstrumentsBloc extends Bloc<InstrumentsEvent, InstrumentsState> {
 
     emit(
       InstrumentsState.loaded(
-        allInstruments: _allInstruments,
-        filteredInstruments: _allInstruments,
+        instruments: List<Instrument>.from(_allInstruments),
       ),
     );
 
@@ -93,8 +92,7 @@ class InstrumentsBloc extends Bloc<InstrumentsEvent, InstrumentsState> {
     if (!connect) {
       return emit(
         InstrumentsState.webSocketConnectionError(
-          allInstruments: _allInstruments,
-          filteredInstruments: _allInstruments,
+          instruments: List<Instrument>.from(_allInstruments),
         ),
       );
     }
@@ -123,12 +121,7 @@ class InstrumentsBloc extends Bloc<InstrumentsEvent, InstrumentsState> {
 
     _loggerService.log('Query: ${event.query}', level: Level.info);
 
-    emit(
-      InstrumentsState.loaded(
-        allInstruments: _allInstruments,
-        filteredInstruments: filtered,
-      ),
-    );
+    emit(InstrumentsState.loaded(instruments: filtered));
   }
 
   void _onPriceUpdated(PriceUpdated event, Emitter<InstrumentsState> emit) {
@@ -149,20 +142,15 @@ class InstrumentsBloc extends Bloc<InstrumentsEvent, InstrumentsState> {
 
       if (state is InstrumentsStateInstrumentsLoaded) {
         final currentState = state as InstrumentsStateInstrumentsLoaded;
-        final filteredIndex = currentState.filteredInstruments.indexWhere(
+        final filteredIndex = currentState.instruments.indexWhere(
           (filteredInstrument) => filteredInstrument.symbol == update.symbol,
         );
         if (filteredIndex != -1) {
           final updatedFiltered = List<Instrument>.from(
-            currentState.filteredInstruments,
+            currentState.instruments,
           )..[filteredIndex] = updatedInstrument;
 
-          emit(
-            InstrumentsState.loaded(
-              allInstruments: _allInstruments,
-              filteredInstruments: updatedFiltered,
-            ),
-          );
+          emit(InstrumentsState.loaded(instruments: updatedFiltered));
         }
       }
     }

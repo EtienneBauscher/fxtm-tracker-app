@@ -179,10 +179,7 @@ void _testOnFetchInstruments() {
     expect: () {
       return <InstrumentsState>[
         const InstrumentsState.loading(),
-        InstrumentsState.loaded(
-          allInstruments: _allInstruments,
-          filteredInstruments: _allInstruments,
-        ),
+        InstrumentsState.loaded(instruments: _allInstruments),
       ];
     },
   );
@@ -209,10 +206,7 @@ void _testOnFetchInstruments() {
     expect: () {
       return <InstrumentsState>[
         const InstrumentsState.loading(),
-        InstrumentsState.loaded(
-          allInstruments: _allInstruments,
-          filteredInstruments: _allInstruments,
-        ),
+        InstrumentsState.loaded(instruments: _allInstruments),
       ];
     },
   );
@@ -246,10 +240,7 @@ void _testOnConnectWebSocket() {
     seed: () {
       _finnhubService.dispose();
 
-      return InstrumentsState.loaded(
-        allInstruments: _allInstruments,
-        filteredInstruments: _allInstruments,
-      );
+      return InstrumentsState.loaded(instruments: _allInstruments);
     },
     expect: () {
       return <InstrumentsState>[];
@@ -270,17 +261,11 @@ void _testOnConnectWebSocket() {
     seed: () {
       _finnhubService.dispose();
 
-      return InstrumentsState.loaded(
-        allInstruments: _allInstruments,
-        filteredInstruments: _allInstruments,
-      );
+      return InstrumentsState.loaded(instruments: _allInstruments);
     },
     expect: () {
       return <InstrumentsState>[
-        InstrumentsState.webSocketConnectionError(
-          allInstruments: _allInstruments,
-          filteredInstruments: _allInstruments,
-        ),
+        InstrumentsState.webSocketConnectionError(instruments: _allInstruments),
       ];
     },
   );
@@ -325,12 +310,7 @@ void _testOnUpdateSearchQuery() {
             return instrument.symbol.toLowerCase().contains('uad');
           }).toList();
 
-      return <InstrumentsState>[
-        InstrumentsState.loaded(
-          allInstruments: _allInstruments,
-          filteredInstruments: filtered,
-        ),
-      ];
+      return <InstrumentsState>[InstrumentsState.loaded(instruments: filtered)];
     },
   );
 }

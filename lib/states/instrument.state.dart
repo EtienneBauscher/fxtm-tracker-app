@@ -11,12 +11,10 @@ class InstrumentsState with _$InstrumentsState {
   const factory InstrumentsState.loading() = InstrumentsStateInstrumentsLoading;
   const factory InstrumentsState.symbolsReady() = InstrumentsStateSymbolsReady;
   const factory InstrumentsState.loaded({
-    required List<Instrument> allInstruments,
-    required List<Instrument> filteredInstruments,
+    required List<Instrument> instruments,
   }) = InstrumentsStateInstrumentsLoaded;
   const factory InstrumentsState.webSocketConnectionError({
-    required List<Instrument> allInstruments,
-    required List<Instrument> filteredInstruments,
+    required List<Instrument> instruments,
   }) = InstrumentsStateWebSocketConnectionError;
   const factory InstrumentsState.error() = InstrumentsStateError;
 }

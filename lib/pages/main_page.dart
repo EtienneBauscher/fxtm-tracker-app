@@ -221,7 +221,7 @@ class _MainPageState extends State<MainPage> {
             );
           },
           error: _buildError,
-          webSocketConnectionError: (allInstruments, filteredInstruments) {
+          webSocketConnectionError: (instruments) {
             /*
           Kludge(etiennebauscher): Due to the subscribtion limitation only one connection can be made at a time and also, only 50 FX Pairs can be subscribed to at once. This forces us to close the connection and re-establish it and subscribe to the selected group. If the user make erratic navigations it can cause the disconnect and reconnect to cause a Websocket channel error, hence the Snackbar in the listener and the Timer to inform the user and to give the connection some time to reset.
           */
@@ -233,10 +233,10 @@ class _MainPageState extends State<MainPage> {
                 ),
               );
             });
-            return _buildInstruments(filteredInstruments);
+            return _buildInstruments(instruments);
           },
-          loaded: (allInstruments, filteredInstruments) {
-            return _buildInstruments(filteredInstruments);
+          loaded: (instruments) {
+            return _buildInstruments(instruments);
           },
         );
       },
