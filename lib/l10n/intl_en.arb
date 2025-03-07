@@ -6,7 +6,7 @@
         "type": "text",
         "placeholders": {}
     },
-    "oandaTitle": "OANDA Trading Ticker Prices",
+    "oandaTitle": "OANDA Ticker Prices",
     "@oandaTitle": {
         "description": "OANDA Ticker title for the main page",
         "type": "text",

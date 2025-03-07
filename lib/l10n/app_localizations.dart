@@ -102,7 +102,7 @@ abstract class AppLocalizations {
   /// OANDA Ticker title for the main page
   ///
   /// In en, this message translates to:
-  /// **'OANDA Trading Ticker Prices'**
+  /// **'OANDA Ticker Prices'**
   String get oandaTitle;
 
   /// Major Pairs Tab text

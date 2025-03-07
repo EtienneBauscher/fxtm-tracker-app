@@ -12,7 +12,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get forexTitle => 'FXTM Forex Tracker';
 
   @override
-  String get oandaTitle => 'OANDA Trading Ticker Prices';
+  String get oandaTitle => 'OANDA Ticker Prices';
 
   @override
   String get majorPairsTab => 'Major Pairs';

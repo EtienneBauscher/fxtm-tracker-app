@@ -1,4 +1,4 @@
-# FXTM Tracker App
+# FXTM App
 
 This Flutter application displays a list of trading instruments from OANDA, categorized into Major, Minor, and Exotic pairs. It features real-time price updates via a WebSocket connection to the Finnhub API, with visual indicators for price changes.
 
